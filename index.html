@@ -102,13 +102,13 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (RECORTE Y ALTURA EXACTA)
+   BARRA DE TEXTO EN MOVIMIENTO (COLOR NEGRO Y RECORTE CENTRAL)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
-	bottom: 6.7%; /* Subió 0.5% */
-	left: 17.5%;  /* Recortado 10% adicional a la izquierda */
-	width: 65%;   /* Recortado 10% a la derecha */
+	bottom: 6.7%;
+	left: 32.5%;  /* Centrado con 15% menos a cada lado */
+	width: 35%;   /* Ventana ajustada para el recorrido */
 	height: 3.2%;
 	z-index: 60;
 	overflow: hidden;
@@ -122,10 +122,10 @@ html, body {
 	display: inline-block;
 	white-space: nowrap;
 	font-size: 13px;
-	font-weight: bold;
-	color: #4a2c11; /* Tono café madera oscuro */
+	font-weight: 900;
+	color: #000000; /* Negro puro para máximo contraste */
 	letter-spacing: 1px;
-	animation: marquesina-continua 22s linear infinite;
+	animation: marquesina-continua 18s linear infinite;
 }
 
 @keyframes marquesina-continua {
