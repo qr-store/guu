@@ -63,7 +63,7 @@ html, body {
 /* MARCOS ROJOS DE PRUEBA (Calibración fina) */
 .btn-carta {
 	left: 17.5%;
-	top: 35.2%; /* Bajó solo 1% */
+	top: 35.2%;
 	width: 65%;
 	height: 4.2%;
 	border: 2px solid rgba(255, 0, 0, 0.8);
@@ -71,7 +71,7 @@ html, body {
 
 .btn-pedidos {
 	left: 17.5%;
-	top: 41.0%; /* Bajó solo 1% */
+	top: 41.0%;
 	width: 65%;
 	height: 4.2%;
 	border: 2px solid rgba(255, 0, 0, 0.8);
@@ -87,7 +87,7 @@ html, body {
 
 .btn-instagram {
 	left: 17.5%;
-	top: 58.6%; /* Bajó solo 2% */
+	top: 58.6%;
 	width: 65%;
 	height: 4.2%;
 	border: 2px solid rgba(255, 0, 0, 0.8);
@@ -102,13 +102,13 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (INFERIOR)
+   BARRA DE TEXTO EN MOVIMIENTO (INFERIOR AJUSTADA)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
-	bottom: 5.2%;
-	left: 10.5%;
-	width: 79%;
+	bottom: 6.2%; /* Subió 1% */
+	left: 12.5%;  /* Recortado 2% adicional hacia adentro a la izquierda */
+	width: 75%;   /* Recortado 2% a la derecha */
 	height: 3.2%;
 	z-index: 60;
 	overflow: hidden;
@@ -125,7 +125,7 @@ html, body {
 	font-weight: bold;
 	color: #4a2c11; /* Tono café madera oscuro */
 	letter-spacing: 1px;
-	animation: marquesina-continua 12s linear infinite;
+	animation: marquesina-continua 22s linear infinite; /* Velocidad mucho más lenta */
 }
 
 @keyframes marquesina-continua {
