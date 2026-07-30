@@ -90,21 +90,22 @@ html, body {
 	height: 4.2%;
 }
 
+/* Botón Ubícanos ampliado al cuadrado completo */
 .btn-ubicanos {
-	left: 30.0%;
-	top: 81.6%;
-	width: 40%;
-	height: 3.8%;
+	left: 12.5%;
+	top: 75.5%;
+	width: 75%;
+	height: 10.5%;
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (AMPLIADA Y MÁS GRANDE)
+   BARRA DE TEXTO EN MOVIMIENTO
    ========================================== */
 .barra-marquesina {
 	position: absolute;
 	bottom: 6.4%;
-	left: 18.0%;  /* Recorte lateral 5% menor a cada lado */
-	width: 64.0%;  /* Recorrido más amplio */
+	left: 18.0%;
+	width: 64.0%;
 	height: 3.8%;
 	z-index: 60;
 	overflow: hidden;
@@ -117,10 +118,10 @@ html, body {
 .texto-movimiento {
 	display: inline-block;
 	white-space: nowrap;
-	font-size: 13.5px; /* 1 punto más grande */
+	font-size: 13.5px;
 	font-weight: 500;
-	color: #f5f5f5;    /* Blanco marfil suave */
-	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85); /* Sombra para resaltar emojis y texto */
+	color: #f5f5f5;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
 	letter-spacing: 0.5px;
 	animation: marquesina-continua 20s linear infinite;
 }
@@ -150,8 +151,8 @@ html, body {
 		<!-- 4. Botón Instagram Configurado -->
 		<a class="boton-invisible btn-instagram" href="https://www.instagram.com/guu_ramenyboba" target="_blank"></a>
 		
-		<!-- 5. Botón Ubícanos -->
-		<a class="boton-invisible btn-ubicanos" href="#" target="_blank"></a>
+		<!-- 5. Botón Ubícanos (Google Maps directo a la dirección) -->
+		<a class="boton-invisible btn-ubicanos" href="https://www.google.com/maps/search/?api=1&query=Av.+Las+Perdices+2990,+local+28,+Pe%C3%B1alol%C3%A9n,+Regi%C3%B3n+Metropolitana" target="_blank"></a>
 
 		<!-- TEXTO EN MOVIMIENTO ABAJO -->
 		<div class="barra-marquesina">
