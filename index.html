@@ -58,15 +58,15 @@ html, body {
 	box-sizing: border-box;
 	background-color: transparent;
 	border-radius: 20px;
+	border: none; /* Totalmente invisibles */
 }
 
-/* MARCOS ROJOS DE PRUEBA */
+/* POSICIONAMIENTO DE ZONAS TÁCTILES */
 .btn-carta {
 	left: 17.5%;
 	top: 35.2%;
 	width: 65%;
 	height: 4.2%;
-	border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 .btn-pedidos {
@@ -74,7 +74,6 @@ html, body {
 	top: 41.0%;
 	width: 65%;
 	height: 4.2%;
-	border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 .btn-whatsapp {
@@ -82,7 +81,6 @@ html, body {
 	top: 48.2%;
 	width: 65%;
 	height: 5.2%;
-	border: 2px solid rgba(255, 0, 127, 0.8);
 }
 
 .btn-instagram {
@@ -90,7 +88,6 @@ html, body {
 	top: 58.6%;
 	width: 65%;
 	height: 4.2%;
-	border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 .btn-ubicanos {
@@ -98,17 +95,16 @@ html, body {
 	top: 81.6%;
 	width: 40%;
 	height: 3.8%;
-	border: 2px solid rgba(255, 0, 0, 0.8);
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (CAFÉ OSCURO Y TIPOGRAFÍA FINA)
+   BARRA DE TEXTO EN MOVIMIENTO (FINAL)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
 	bottom: 6.7%;
-	left: 23.0%;  /* Recorte ajustado +0,5% a cada lado */
-	width: 54.0%;  /* Ancho perfecto contenido */
+	left: 23.0%;
+	width: 54.0%;
 	height: 3.2%;
 	z-index: 60;
 	overflow: hidden;
@@ -121,9 +117,9 @@ html, body {
 .texto-movimiento {
 	display: inline-block;
 	white-space: nowrap;
-	font-size: 12px;
-	font-weight: 500; /* Tipografía fina y estilizada */
-	color: #221105;   /* Café oscuro intenso de alto contraste */
+	font-size: 12.5px; /* Medio punto más grande */
+	font-weight: 500;
+	color: #221105;    /* Café oscuro elegante de alto contraste */
 	letter-spacing: 0.5px;
 	animation: marquesina-continua 20s linear infinite;
 }
