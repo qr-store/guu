@@ -48,7 +48,7 @@ html, body {
 }
 
 /* ==========================================
-   BOTONES INVISIBLES SOBRE EL DISEÑO DE MADERA
+   BOTONES INVISIBLES SOBRE EL DISEÑO
    ========================================== */
 .boton-invisible {
 	position: absolute;
@@ -98,7 +98,7 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO
+   BARRA DE TEXTO EN MOVIMIENTO (BLANCO MARFIL SLIM)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
@@ -119,7 +119,8 @@ html, body {
 	white-space: nowrap;
 	font-size: 12.5px;
 	font-weight: 500;
-	color: #221105;
+	color: #f5f5f5; /* Blanco marfil muy claro */
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra sutil para lecturas sobre neón */
 	letter-spacing: 0.5px;
 	animation: marquesina-continua 20s linear infinite;
 }
@@ -134,20 +135,20 @@ html, body {
 
 <div class="contenedor-pantalla-unica">
 	<div class="area-grafica">
-		<!-- Imagen de madera tallada -->
+		<!-- Imagen del menú -->
 		<img src="index-01.png" alt="Guū Ramen & Boba">
 		
-		<!-- 1. Botón Carta Menú (Abre el PDF) -->
+		<!-- 1. Botón Carta Menú (PDF) -->
 		<a class="boton-invisible btn-carta" href="carta_menu.pdf" target="_blank"></a>
 		
-		<!-- 2. Botón Pedidos -->
+		<!-- 2. Botón Pedidos Directos -->
 		<a class="boton-invisible btn-pedidos" href="https://wa.me/56961804562?text=Hola%20Gu%C5%AB...%20Ramen%20%26%20Boba%20%F0%9F%8D%9C%20quiero%20hacer%20un%20pedido.%20Mi%20nombre%20es:" target="_blank"></a>
 		
 		<!-- 3. Botón WhatsApp Directo -->
 		<a class="boton-invisible btn-whatsapp" href="https://wa.me/56961804562?text=Hola%20Gu%C5%AB...%20Ramen%20%26%20Boba%20%F0%9F%8D%9C%20necesito%20contactarme%20con%20ustedes.%20Mi%20nombre%20es:" target="_blank"></a>
 		
-		<!-- 4. Botón Instagram -->
-		<a class="boton-invisible btn-instagram" href="https://www.instagram.com/" target="_blank"></a>
+		<!-- 4. Botón Instagram Configurado -->
+		<a class="boton-invisible btn-instagram" href="https://www.instagram.com/guu_ramenyboba" target="_blank"></a>
 		
 		<!-- 5. Botón Ubícanos -->
 		<a class="boton-invisible btn-ubicanos" href="#" target="_blank"></a>
