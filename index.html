@@ -60,7 +60,7 @@ html, body {
 	border-radius: 20px;
 }
 
-/* MARCOS ROJOS DE PRUEBA (Calibración fina) */
+/* MARCOS ROJOS DE PRUEBA */
 .btn-carta {
 	left: 17.5%;
 	top: 35.2%;
@@ -102,13 +102,13 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (INFERIOR AJUSTADA)
+   BARRA DE TEXTO EN MOVIMIENTO (RECORTE Y ALTURA EXACTA)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
-	bottom: 6.2%; /* Subió 1% */
-	left: 12.5%;  /* Recortado 2% adicional hacia adentro a la izquierda */
-	width: 75%;   /* Recortado 2% a la derecha */
+	bottom: 6.7%; /* Subió 0.5% */
+	left: 17.5%;  /* Recortado 10% adicional a la izquierda */
+	width: 65%;   /* Recortado 10% a la derecha */
 	height: 3.2%;
 	z-index: 60;
 	overflow: hidden;
@@ -125,7 +125,7 @@ html, body {
 	font-weight: bold;
 	color: #4a2c11; /* Tono café madera oscuro */
 	letter-spacing: 1px;
-	animation: marquesina-continua 22s linear infinite; /* Velocidad mucho más lenta */
+	animation: marquesina-continua 22s linear infinite;
 }
 
 @keyframes marquesina-continua {
