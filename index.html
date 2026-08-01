@@ -48,6 +48,45 @@ html, body {
 }
 
 /* ==========================================
+   DESTELLO ELEGANTE EN EL LOGO (CSS PURO)
+   ========================================== */
+.capa-brillo-logo {
+	position: absolute;
+	top: 5.5%;      /* Posición exacta sobre el logo circular */
+	left: 28.5%;
+	width: 43%;     /* Diámetro del área del logo */
+	height: 23%;
+	border-radius: 50%; /* Corte circular perfecto */
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 40;
+}
+
+.efecto-destello {
+	position: absolute;
+	top: -50%;
+	left: -150%;
+	width: 200%;
+	height: 200%;
+	background: linear-gradient(
+		105deg, 
+		rgba(255, 255, 255, 0) 0%, 
+		rgba(255, 255, 255, 0.05) 40%, 
+		rgba(255, 255, 255, 0.45) 50%, 
+		rgba(255, 255, 255, 0.05) 60%, 
+		rgba(255, 255, 255, 0) 100%
+	);
+	transform: rotate(25deg);
+	animation: ráfaga-luz 5s ease-in-out infinite;
+}
+
+@keyframes ráfaga-luz {
+	0% { left: -150%; }
+	20% { left: 150%; }  /* Rápido paso del destello */
+	100% { left: 150%; } /* Pausa elegante antes de repetir */
+}
+
+/* ==========================================
    BOTONES INVISIBLES SOBRE EL DISEÑO
    ========================================== */
 .boton-invisible {
@@ -99,13 +138,13 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO (INMEDIATA Y MÁS GRANDE)
+   BARRA DE TEXTO EN MOVIMIENTO
    ========================================== */
 .barra-marquesina {
 	position: absolute;
 	bottom: 6.4%;
-	left: 13.0%;  /* Ampliada 5% a cada costado */
-	width: 74.0%;  /* Ancho extendido */
+	left: 13.0%;
+	width: 74.0%;
 	height: 4.0%;
 	z-index: 60;
 	overflow: hidden;
@@ -118,16 +157,16 @@ html, body {
 .texto-movimiento {
 	display: inline-block;
 	white-space: nowrap;
-	font-size: 14.5px; /* 1 punto más grande */
+	font-size: 14.5px;
 	font-weight: 500;
 	color: #f5f5f5;
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
 	letter-spacing: 0.5px;
-	animation: marquesina-continua 38s linear infinite;
+	animation: marquesina-continua 65s linear infinite;
 }
 
 @keyframes marquesina-continua {
-	0% { transform: translateX(0%); }   /* Inicia visible de inmediato al abrir */
+	0% { transform: translateX(0%); }
 	100% { transform: translateX(-100%); }
 }
 </style>
@@ -139,6 +178,11 @@ html, body {
 		<!-- Imagen del menú -->
 		<img src="index-01.png" alt="Guū Ramen & Boba">
 		
+		<!-- DESTELLO DE LUZ EN EL LOGO SUPERIOR -->
+		<div class="capa-brillo-logo">
+			<div class="efecto-destello"></div>
+		</div>
+
 		<!-- 1. Botón Carta Menú (PDF) -->
 		<a class="boton-invisible btn-carta" href="carta_menu.pdf" target="_blank"></a>
 		
