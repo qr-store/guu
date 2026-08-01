@@ -48,15 +48,15 @@ html, body {
 }
 
 /* ==========================================
-   DESTELLO ELEGANTE EN EL LOGO (CSS PURO)
+   DESTELLO EN EL LOGO (CADA 20 SEGUNDOS)
    ========================================== */
 .capa-brillo-logo {
 	position: absolute;
-	top: 5.5%;      /* Posición exacta sobre el logo circular */
+	top: 5.5%;
 	left: 28.5%;
-	width: 43%;     /* Diámetro del área del logo */
+	width: 43%;
 	height: 23%;
-	border-radius: 50%; /* Corte circular perfecto */
+	border-radius: 50%;
 	overflow: hidden;
 	pointer-events: none;
 	z-index: 40;
@@ -77,13 +77,13 @@ html, body {
 		rgba(255, 255, 255, 0) 100%
 	);
 	transform: rotate(25deg);
-	animation: ráfaga-luz 5s ease-in-out infinite;
+	animation: ráfaga-luz 20s ease-in-out infinite;
 }
 
 @keyframes ráfaga-luz {
 	0% { left: -150%; }
-	20% { left: 150%; }  /* Rápido paso del destello */
-	100% { left: 150%; } /* Pausa elegante antes de repetir */
+	5% { left: 150%; }
+	100% { left: 150%; }
 }
 
 /* ==========================================
@@ -100,7 +100,6 @@ html, body {
 	border: none;
 }
 
-/* POSICIONAMIENTO DE ZONAS TÁCTILES */
 .btn-carta {
 	left: 17.5%;
 	top: 35.2%;
@@ -129,7 +128,6 @@ html, body {
 	height: 4.2%;
 }
 
-/* Botón Ubícanos */
 .btn-ubicanos {
 	left: 12.5%;
 	top: 75.5%;
@@ -169,16 +167,51 @@ html, body {
 	0% { transform: translateX(0%); }
 	100% { transform: translateX(-100%); }
 }
+
+/* ==========================================
+   BOTÓN DE SONIDO (INFERIOR - DEBAJO DEL TEXTO)
+   ========================================== */
+.btn-sonido {
+	position: absolute;
+	bottom: 2.2%;      /* Ubicado justo entre la marquesina y el borde inferior */
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 70;
+	background: rgba(0, 0, 0, 0.6);
+	color: #f5f5f5;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 4px 12px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	backdrop-filter: blur(4px);
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.btn-sonido:active {
+	transform: translateX(-50%) scale(0.95);
+}
 </style>
 </head>
 <body>
+
+<!-- REPRODUCTOR DE AUDIO -->
+<audio id="musicaFondo" loop>
+	<source src="musica.mp3" type="audio/mpeg">
+</audio>
 
 <div class="contenedor-pantalla-unica">
 	<div class="area-grafica">
 		<!-- Imagen del menú -->
 		<img src="index-01.png" alt="Guū Ramen & Boba">
 		
-		<!-- DESTELLO DE LUZ EN EL LOGO SUPERIOR -->
+		<!-- DESTELLO EN EL LOGO -->
 		<div class="capa-brillo-logo">
 			<div class="efecto-destello"></div>
 		</div>
@@ -204,8 +237,34 @@ html, body {
 				🍜 ¡BIENVENIDOS A GUŪ RAMEN & BOBA! Le ofrecemos nuestras mejores especialidades • RAMEN: Miso, Tonkotsu, Shoyu, Miso Vegano y Guu Ramen • 🥟 ENTRADAS: Gyoza Sichuan • 🧋 MILK TEA: Strawberry, Mango, Classic, Taro • 🧃 FRUIT TEA: Berry Bliss, Orange Pop, Sandía Fresh, Lychee Zen, Mango Tango, Maui Punch • 🍵 MATCHA: Matcha Frutilla, Mango Matcha • 🧇 POSTRES: Bubble Waffles (Vainilla y Matcha con Helado) • ¡HAZ TU PEDIDO DIRECTO AQUÍ! •
 			</div>
 		</div>
+
+		<!-- BOTÓN DE CONTROL DE AUDIO ABAJO -->
+		<button class="btn-sonido" onclick="conmutarAudio()" id="botonAudio">
+			<span id="iconoAudio">🔇</span> <span id="textoAudio">SONIDO</span>
+		</button>
 	</div>
 </div>
+
+<script type="text/javascript">
+function conmutarAudio() {
+	var audio = document.getElementById("musicaFondo");
+	var icono = document.getElementById("iconoAudio");
+	var texto = document.getElementById("textoAudio");
+
+	if (audio.paused) {
+		audio.play().then(function() {
+			icono.textContent = "🔊";
+			texto.textContent = "SONIDO";
+		}).catch(function(error) {
+			console.log("No se pudo reproducir el archivo de audio.");
+		});
+	} else {
+		audio.pause();
+		icono.textContent = "🔇";
+		texto.textContent = "SONIDO";
+	}
+}
+</script>
 
 </body>
 </html>
