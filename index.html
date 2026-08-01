@@ -90,7 +90,7 @@ html, body {
 	height: 4.2%;
 }
 
-/* Botón Ubícanos ampliado al cuadrado completo */
+/* Botón Ubícanos */
 .btn-ubicanos {
 	left: 12.5%;
 	top: 75.5%;
@@ -99,14 +99,14 @@ html, body {
 }
 
 /* ==========================================
-   BARRA DE TEXTO EN MOVIMIENTO
+   BARRA DE TEXTO EN MOVIMIENTO (INMEDIATA Y MÁS GRANDE)
    ========================================== */
 .barra-marquesina {
 	position: absolute;
 	bottom: 6.4%;
-	left: 18.0%;
-	width: 64.0%;
-	height: 3.8%;
+	left: 13.0%;  /* Ampliada 5% a cada costado */
+	width: 74.0%;  /* Ancho extendido */
+	height: 4.0%;
 	z-index: 60;
 	overflow: hidden;
 	display: flex;
@@ -118,16 +118,16 @@ html, body {
 .texto-movimiento {
 	display: inline-block;
 	white-space: nowrap;
-	font-size: 13.5px;
+	font-size: 14.5px; /* 1 punto más grande */
 	font-weight: 500;
 	color: #f5f5f5;
 	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.85);
 	letter-spacing: 0.5px;
-	animation: marquesina-continua 20s linear infinite;
+	animation: marquesina-continua 38s linear infinite;
 }
 
 @keyframes marquesina-continua {
-	0% { transform: translateX(100%); }
+	0% { transform: translateX(0%); }   /* Inicia visible de inmediato al abrir */
 	100% { transform: translateX(-100%); }
 }
 </style>
@@ -151,13 +151,13 @@ html, body {
 		<!-- 4. Botón Instagram Configurado -->
 		<a class="boton-invisible btn-instagram" href="https://www.instagram.com/guu_ramenyboba" target="_blank"></a>
 		
-		<!-- 5. Botón Ubícanos (Google Maps directo a la dirección) -->
+		<!-- 5. Botón Ubícanos -->
 		<a class="boton-invisible btn-ubicanos" href="https://www.google.com/maps/search/?api=1&query=Av.+Las+Perdices+2990,+local+28,+Pe%C3%B1alol%C3%A9n,+Regi%C3%B3n+Metropolitana" target="_blank"></a>
 
-		<!-- TEXTO EN MOVIMIENTO ABAJO -->
+		<!-- TEXTO EN MOVIMIENTO CON BIENVENIDA Y PRODUCTOS -->
 		<div class="barra-marquesina">
 			<div class="texto-movimiento">
-				🍜 BIENVENIDOS A GUŪ RAMEN & BOBA • EL MEJOR SABOR ASIÁTICO • ¡HAZ TU PEDIDO DIRECTO AQUÍ! 🧋
+				🍜 ¡BIENVENIDOS A GUŪ RAMEN & BOBA! Le ofrecemos nuestras mejores especialidades • RAMEN: Miso, Tonkotsu, Shoyu, Miso Vegano y Guu Ramen • 🥟 ENTRADAS: Gyoza Sichuan • 🧋 MILK TEA: Strawberry, Mango, Classic, Taro • 🧃 FRUIT TEA: Berry Bliss, Orange Pop, Sandía Fresh, Lychee Zen, Mango Tango, Maui Punch • 🍵 MATCHA: Matcha Frutilla, Mango Matcha • 🧇 POSTRES: Bubble Waffles (Vainilla y Matcha con Helado) • ¡HAZ TU PEDIDO DIRECTO AQUÍ! •
 			</div>
 		</div>
 	</div>
